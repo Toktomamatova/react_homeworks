@@ -1,42 +1,13 @@
+import About from "./components/about/About";
+import Title from "./components/title/Title";
 function App() {
-    return (
-        <div>
-            <Header />
-            <Content />
-            <Footer />
-        </div>
-    );
+  const titleData={title:"Аманай",subtitle:"34-03"};
+  const aboutData={title:"Центр Geeks",body:"Переходите поссылке ниже↓",link:"https://geeks.kg/"};
+  return (
+      <div>
+        <About {...aboutData} />
+        <Title {...titleData} />
+      </div>
+  );
 }
-
-function Header() {
-    return (
-        <div>
-            <h2>Header</h2>
-            <Title />
-        </div>
-    );
-}
-
-function Content() {
-    return (
-        <div>
-            <h2>Content</h2>
-            <Title />
-        </div>
-    );
-}
-
-function Footer() {
-    return (
-        <div>
-            <h2>Footer</h2>
-            <Title />
-        </div>
-    );
-}
-
-function Title() {
-    return <h1 className="title">🎔✿☻</h1>;
-}
-
 export default App;
